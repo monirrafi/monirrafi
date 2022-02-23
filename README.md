@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Monir rafi
 
 j'ai fait des developpemnt des applications avec MS Access et VBA
@@ -13,3 +14,6 @@ Mes attentes envers le programme c'est de être bien formé en developpement afi
 
 
 
+=======
+Soccer
+>>>>>>> Interet_Particulier
