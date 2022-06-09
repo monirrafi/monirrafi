@@ -1,3 +1,0 @@
-100;"route";250
-200;"Titanic";450
-300;"Grand Livre";1500
