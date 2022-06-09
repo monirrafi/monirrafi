@@ -1,0 +1,583 @@
+#nombres =["0","1","2","3","4","5","6","7","8","9","/","!","@","#","$","%","?","&","*","(",")","[","]","{","}","+"]
+#print(nombres[::-1])
+
+        
+"""
+def fichier_fichier(fich1, fich2):
+    f1 = open(fich1,"r")
+    f2= open(fich2,"a")
+    
+    liste = list(f1.readlines())
+    for i in range(len(liste)):
+        p_liste =[]
+        for mot in liste[i].split():
+            mot = de_encrypter(mot)
+            mot= mot + " "*(18-len(mot)) 
+            p_liste.append(mot)
+        f2.write("".join(p_liste)+"\n")
+    f1.close()
+    f2.close()
+fichier_fichier("initial.txt","bd.txt")
+
+def de_encrypter(strl):
+    lettres =["a","b","c","d","k","l","m","x","y","z"]
+    nombres =["0","1","2","3","4","5","6","7","8","9"]
+    car = ""
+    strl = list(strl)        
+    for i in range(len(strl)):
+         car = strl[i]
+         if car in lettres:
+             car = nombres[9-lettres.index(car)]
+         elif car in nombres:
+             car = lettres[9-nombres.index(car)]
+         strl[i] = car
+    return "".join(strl)
+
+def decrypter(l):
+        p = []        
+        for i in l:
+            i=str(i)
+            i=de_encrypter(i) 
+            i= i + " "*(18-len(i)) 
+            p.append(i)
+        return "".join(p)
+def fichier_fichier(fich1, fich2):
+    f1 = open(fich1,"r")
+    f2= open(fich2,"a")
+    liste = list(f1.readlines())
+    for i in range(len(liste)):
+            f2.write(str(decrypter(liste[i].split()))+"\n")
+    
+    f1.close()
+    f2.close()
+cls()
+fichier_fichier("initial.txt","bd.txt")
+
+
+
+def lire_fichier(nom_fichier):
+            l = []
+            f=open(nom_fichier,"r")
+            for item in list(f.readlines()):
+                l.append(item.split())
+                
+            f.close()
+            return l
+
+def bd():
+        liste = []
+        for l in lire_fichier("bd.txt"):
+            p_liste=[]    
+
+            for mot in l:
+                p_liste.append(de_encrypter(mot))
+            liste.append(p_liste)
+
+#            liste.append(decrypter(l))
+        return liste
+def maj():
+        f= open("bd.txt","w")
+        for l in bd:
+            strl = ""
+            for item in l:
+                item = str(item)
+                item = de_encrypter(item)
+                strl = strl + item + " "*(18-len(item)) 
+            f.write(strl+"\n")
+            
+        f.close()
+
+cls()
+bd=bd()
+print(bd)
+#maj()
+
+
+
+bd=[
+['4321', '1erutiov', '0.48', '0001', '00001', '%8.1'],
+['6543', '321tahc', '051', '0002', '00052', '%3'],
+['3333', '4321', '5', '002', '0001', '%51'],
+['0000', 'nimda', '0', '0', '0', '%0']]
+bd=[
+['4321', '1erutiov', '0.48', '0001', '00001', '%8.1'],
+['6543', '321tahc', '051', '0002', '00052', '%3'],
+['3333', '4321', '5', '002', '0001', '%51'],
+['0000', 'nimda', '0', '0', '0', '%0']]
+def maj():
+        f= open("bd.txt","w")
+        for l in bd:
+            strl = ""
+            for item in l:
+                item = str(item)
+                item = de_encrypter(item)
+                strl = strl + item + " "*(18-len(item)) 
+            f.write(strl+"\n")
+            
+        f.close()
+
+
+#maj()
+
+    def decrypter(l):
+        p = []        
+        for i in l:
+            i=str(i)
+            i=i[::-1] 
+            #i= i + " "*(18-len(i)) 
+            p.append(i)
+        return p
+
+def decrypter(l):
+    p = []        
+    for i in l:
+        i=i[::-1] 
+        i= i + " "*(18-len(i)) 
+        p.append(i)
+    return " ".join(p)    
+def fichier_fichier(fich1, fich2):
+    f1 = open(fich1,"r")
+    f2= open(fich2,"a")
+    
+    liste = list(f1.readlines())
+    for i in range(len(liste)):
+        f2.write(decrypter(liste[i].split())+"\n")
+    f1.close()
+    f2.close()
+fichier_fichier("initial.txt","bd.txt")
+
+
+
+l=["233","695","525"]   
+#print(decrypter(l))
+
+
+def decrypter(l):
+    p = []        
+    for i in l:
+        i=i[::-1] 
+        i= i + " "*(18-len(i)) 
+        p.append(i)
+    return "".join(p)    
+def fichier_fichier(fich1, fich2):
+    f1 = open(fich1,"r")
+    f2= open(fich2,"a")
+    f2.write(f1.readline())
+    liste = list(f1.readlines())
+    for i in range(1,len(liste)):
+        f2.write(decrypter(liste[i].split())+"\n")
+    f1.close()
+    f2.close()
+#fichier_fichier("initial.txt","bd.txt")
+fichier_fichier("bd.txt","bd2#.txt")
+def decrypter(l):
+    p = []        
+    for i in l:
+        i=i[::-1] 
+        i= i + " "*(18-len(i)) 
+        p.append(i)
+    return "".join(p)    
+def fichier_fichier(fich1, fich2):
+    f1 = open(fich1,"r")
+    f2= open(fich2,"a")
+    liste = list(f1.readlines())
+    for line in liste:
+        f2.write(decrypter(line.split())+"\n")
+    f1.close()
+    f2.close()
+fichier_fichier("initial.txt","bd.txt")
+fichier_fichier("bd.txt","bd2#.txt")
+
+def fichier_fichier(fich1, fich2):
+    liste = []
+    s=""
+    phrase =""
+    line1 =""
+    f1 = open(fich1,"r")
+    f2= open(fich2,"a")
+#        f2.write(" ".join(list(f2.readline())))
+    for line in f1.readlines():
+        for mot in line:
+                mot = mot[::-1]
+                mot = mot + " "*(18-len(mot))
+                liste.append(mot)
+            phrase = "".join(liste)
+#            phrase = phrase.split(" ")
+            f2.write(phrase)
+        f1.close()
+        f2.close()
+    fichier_fichier("initial.txt","bd.txt")
+ 
+    def remplir_fichier(bd):
+        liste = [] 
+        for i in list(list(bd.values())[0].keys()):
+            i=i[::-1]
+            if len(i) < 17:
+                i = i + " "*(17-len(i))
+            liste.append(i)
+        entete = ["Numero_du_compte "] + liste
+
+        f=open("bd.txt","a")
+        f.write(" ".join(entete)+ "\n")
+        for  i in bd.keys():
+            i=i[::-1]
+            phrase =""
+            for item in list(bd[i].values()):
+                item = item[::-1]
+                if len(item) < 17:
+                    item = item + " "*(18-len(item))
+                phrase = phrase  + item
+            f.write(i + " "*(18-len(i))+ phrase +  "\n")
+
+        f.close()
+        return None
+      
+    def lire_fichier(nom_fichier):
+            l = []
+            f=open(nom_fichier,"r")
+            for item in list(f.readlines()):
+                l.append("".join(item))
+            f.close()
+            return l
+    def decrypter(l):
+        p = []        
+        for i in l:
+            i=i[::-1] 
+            i= i + " "*(18-len(i)) 
+            p.append(i)
+        return "".join(p)    
+    
+    def fichier_fichier(fich1, fich2):
+        f1 = open(fich1,"r")
+        f2= open(fich2,"a")
+#        f2.write(f1.readline())
+        liste = list(f1.readlines())
+        for i in range(1,len(liste)):
+            f2.write(decrypter(liste[i].split())+"\n")
+        f1.close()
+        f2.close()
+    
+
+    def lire_fichier(nom_fichier):
+        ent , valeur =[],[]
+        f=open(nom_fichier,"r")
+        l= list(f.readlines())
+        ent = l[0].split()
+        
+        for item in l[1:]:
+            valeur.append(item.split())
+
+        f.close()
+        return ent, valeur
+
+    cle, valeur = lire_fichier("bd.txt")
+    
+    def creer_bd():
+        bd={}
+        for item in valeur:
+            dic = {}
+            for i in range(1,len(item)-1):
+                dic[cle[i]]=item[i][::-1]
+            bd[item[0][::-1]]=dic
+        return bd
+    bd = creer_bd()
+
+
+#    cle, valeur = lire_fichier("bd.txt")
+
+def decrypter(l):
+        p = []        
+        for i in l:
+            i=i[::-1] 
+            i= i + " "*(18-len(i)) 
+            p.append(i)
+        return "".join(p)    
+def fichier_fichier(fich1, fich2):
+        f1 = open(fich1,"r")
+        f2= open(fich2,"a")
+        liste = list(f1.readlines())
+        for item in liste:
+            f2.write(decrypter(item.split())+"\n")
+        f1.close()
+        f2.close()
+fichier_fichier("initial.txt","bd.txt")
+#for l in lire_fichier("bd.txt"):
+    #print(l)
+
+def lire_fichier(nom_fichier):
+        l = []
+        f=open(nom_fichier,"r")
+        for item in list(f.readlines()):
+            l.append(item.split())
+            
+        f.close()
+        return l
+def decrypter(l):
+    p = []        
+    for i in l:
+        i=i[::-1] 
+#        i= i + " "*(18-len(i)) 
+        p.append(i)
+    return p
+def bd():
+    liste = []     
+    for l in lire_fichier("bd.txt"):
+          liste.append(decrypter(l))
+    return liste
+print(bd())
+
+    def prepare(dic,n_compte):
+        liste =[]
+        for i in list(list(bd.values())[0].keys()):
+            if len(i) < 17:
+                i = i + " "*(17-len(i))
+            liste.append(i)
+        entete = ["Numero_du_compte "] + liste
+        entete = " ".join(entete)
+
+        phrase = ""
+        for item in list(dic.values()):
+                item =str(item)
+                if len(item) < 17:
+                    item = item + " "*(18-len(item))
+                phrase = phrase  + item
+        phrase = n_compte + " "*(18-len(n_compte)) + phrase
+        return entete, phrase
+
+def guichet_banque():
+    def fichier_fichier(fich1, fich2):
+        liste = []
+        s=""
+        phrase =""
+        line1 =""
+        f1 = open(fich1,"r")
+        f2= open(fich2,"a")
+#        f2.write(" ".join(list(f2.readline())))
+        for line in f1.readlines():
+            for mot in line:
+                mot = mot[::-1]
+                liste.append(mot)
+                phrase = "".join(liste)
+#            phrase = phrase.split(" ")
+            f2.write(phrase)
+        f1.close()
+        f2.close()
+    fichier_fichier("initial.txt","bd.txt")
+        
+
+    def remplir_fichier(bd):
+        liste = [] 
+        for i in list(list(bd.values())[0].keys()):
+            i=i[::-1]
+            if len(i) < 17:
+                i = i + " "*(17-len(i))
+            liste.append(i)
+        entete = ["Numero_du_compte "] + liste
+
+        f=open("bd.txt","a")
+        f.write(" ".join(entete)+ "\n")
+        for  i in bd.keys():
+            i=i[::-1]
+            phrase =""
+            for item in list(bd[i].values()):
+                item = item[::-1]
+                if len(item) < 17:
+                    item = item + " "*(18-len(item))
+                phrase = phrase  + item
+            f.write(i + " "*(18-len(i))+ phrase +  "\n")
+
+        f.close()
+        return None
+
+    def lire_fichier(nom_fichier):
+        ent , valeur =[],[]
+        f=open(nom_fichier,"r")
+        l= list(f.readlines())
+        ent = l[0].split()
+        
+        for item in l[1:]:
+            valeur.append(item.split())
+
+        f.close()
+        return ent, valeur
+
+    cle, valeur = lire_fichier("initial.txt")
+    
+    def creer_bd():
+        bd={}
+        for item in valeur:
+            dic = {}
+            for i in range(1,len(item)-1):
+                dic[cle[i]]=item[i]
+            bd[item[0]]=dic
+        return bd
+    bd = creer_bd()
+    remplir_fichier(bd)
+    def cherche_compte(n_compte):
+        
+        if n_compte in bd:
+            bd[n_compte]
+            return bd[n_compte]
+        else:
+            return 0
+
+    def modifier_depot(n_compte,type_compte,montant):
+        dic = bd[n_compte]
+        somme = float(dic[type_compte]) + montant
+        if somme < 0:
+            print("votre solde est insuffisant pour faire la transaction !!!")
+        else:
+            dic[type_compte]=somme
+        return None
+    def prepare(dic,n_compte):
+        liste =[]
+        for i in list(list(bd.values())[0].keys()):
+            if len(i) < 17:
+                i = i + " "*(17-len(i))
+            liste.append(i)
+        entete = ["Numero_du_compte "] + liste
+        entete = " ".join(entete)
+
+        phrase = ""
+        for item in list(dic.values()):
+                item =str(item)
+                if len(item) < 17:
+                    item = item + " "*(18-len(item))
+                phrase = phrase  + item
+        phrase = n_compte + " "*(18-len(n_compte)) + phrase
+        return entete, phrase
+    def afficher_etat(n_compte):
+        dic = bd[n_compte]
+        entete, valeurs = prepare(dic,n_compte[::-1])
+        print(entete)
+        print(valeurs)
+
+    def calcul_placement(n_compte):
+        dic = bd[n_compte]
+        montant = dic["Montant_placement"]
+        interet = dic["Taux_interet"]
+        montant=float(montant)
+        interet=float(interet)
+        montant = montant*(1+interet)
+        return [montant,montant**2,montant**3,montant**4,montant**5]
+    
+
+    
+    def type_compte():
+    
+        print("=="*60)
+        print("1-Cheque")
+        print("2-Épargne")
+        print("3-Placements")
+        print("="*60)
+        
+        choix = int(input("Entrez votre choix : "))
+        if choix == 1:
+            compte ="Montant_cheque"
+        elif choix == 2:
+           compte ="Montant_epargne"
+        elif choix == 3:
+            compte ="Montant_placement"
+        else:
+            compte = "Votre choix n'est valide!!!"
+        return compte
+        
+        
+    
+    cond = False
+    menu = 1
+    compte = 0
+    while (not cond):
+        numero_compte = input("Entrez le numero de votre compte : ")
+        numero_compte = numero_compte[::-1]
+        dic = cherche_compte(numero_compte)
+
+        if len(dic) == 0:
+            print("votre numero du compte n'existe pas")
+        else:
+            mot_passe = input("Entrez mot de passe : ")
+            mot_passe=mot_passe[::-1]
+            
+            if mot_passe == dic["Mot_de_passe"]:
+                menu=1
+                cond =True
+            else:
+                print("Votre mot de passe est incorrecte")
+        
+
+            
+    if menu == 1:
+        compte = type_compte()
+
+            
+
+        cond_2 = False
+        while(not cond_2):
+            if compte == "Montant_placement":
+                print("=="*60)
+                print("1-Faire un dépôt")
+                print("2-Faire un retrait")
+                print("3-Changer de compte")
+                print("4-Voir mon retour de placement")
+                print("5-Terminer")
+                print("=="*60)
+                choix = int(input("Entrez votre choix : "))
+                if choix == 1:
+                    montant=float(input("Entrer le montant deposer :"))
+                    modifier_depot(numero_compte,compte,montant)
+                    afficher_etat(numero_compte)
+                elif choix == 2:
+                    montant=float(input("Entrer le montant du retrait :"))
+                    modifier_depot(numero_compte,compte,-montant)
+                    afficher_etat(numero_compte)
+                elif choix == 3:
+                    compte = type_compte()
+                    
+                elif choix == 4:
+                    i=1
+                    for res in calcul_placement(numero_compte):
+                        print("Pour "+ str(i) + "ans est " + str(res))
+                        i+=1
+                elif choix == 5:
+                    cond_2 = True
+                else:
+                    print("votre choix est invalide!!")
+            else:
+                print("=="*60)
+                print("1-Faire un dépôt")
+                print("2-Faire un retrait")
+                print("3-Changer de compte")
+                print("4-Terminer")
+                print("="*60)
+                choix = int(input("Entrez votre choix : "))
+                if choix == 1:
+                    montant=float(input("Entrer le montant deposer :"))
+                    modifier_depot(numero_compte,compte,montant)
+                    afficher_etat(numero_compte)
+                elif choix == 2:
+                    montant=float(input("Entrer le montant du retrait :"))
+                    modifier_depot(numero_compte,compte,-montant)
+                    afficher_etat(numero_compte)
+                elif choix == 3:
+                    compte = type_compte()
+                elif choix == 4:
+                    cond_2 = True
+                else:
+                    print("votre choix est invalide!!")
+
+
+
+
+
+guichet_banque()
+        
+        
+
+
+        
+            
+            
+
+
+    
+        		
